@@ -12,11 +12,13 @@ class TipsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.red
         
         testAutoClosure(2>1)
         
         testStruct()
         
+        testConvenience()
         
     }
     
@@ -34,7 +36,13 @@ class TipsViewController: UIViewController {
     }
     
     func testConvenience() {
-        _ = ClassB.init(name: <#T##String#>)
+        // 此时可以调用，但是没有提示
+        let bbb = ClassB.init(isFamel: false)
+        print("nameA:\(bbb.nameA),nameB:\(bbb.nameB)")
+        
+        let bbbb = ClassB.init(age: 20)
+        print("nameA:\(bbbb.nameA),nameB:\(bbbb.nameB)")
+        
     }
 
 }
@@ -54,6 +62,10 @@ class ClassA {
     
     convenience init(isFamel:Bool) {
         self.init(name: (isFamel ? "lili":"mimi"))
+    }
+    
+    required convenience init(age:Int) {
+        self.init(name: age > 10 ? "age>10":"age<10")
     }
     
 }
