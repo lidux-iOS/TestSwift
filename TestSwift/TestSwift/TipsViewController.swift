@@ -39,9 +39,11 @@ class TipsViewController: UIViewController {
         // 此时可以调用，但是没有提示
         let bbb = ClassB.init(isFamel: false)
         print("nameA:\(bbb.nameA),nameB:\(bbb.nameB)")
+        bbb.updateCell(10)
         
         let bbbb = ClassB.init(age: 20)
         print("nameA:\(bbbb.nameA),nameB:\(bbbb.nameB)")
+        _ = bbbb.updateCellWithBackData(32)
         
     }
 
@@ -70,7 +72,7 @@ class ClassA {
     
 }
 
-class ClassB: ClassA {
+class ClassB: ClassA, ClassAProtocol {
     var nameB : String
     
     override init(name: String) {
@@ -78,5 +80,23 @@ class ClassB: ClassA {
         super.init(name: (name+nameB))
     }
     
+    typealias T = Int
+    typealias M = Int
+    func updateCell(_ data: Int) {
+        print("updateCell:\(data)")
+    }
+    
+    func updateCellWithBackData(_ data: Int) -> Int {
+        print("updateCellWithBackData:\(data)")
+        return data
+    }
+    
+}
+
+protocol ClassAProtocol {
+    associatedtype T
+    associatedtype M
+    func updateCell(_ data: T)
+    func updateCellWithBackData(_ data:T) -> M
 }
 
