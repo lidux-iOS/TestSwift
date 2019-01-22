@@ -22,11 +22,11 @@ class BezierViewController: UIViewController {
         }
         self.getACircle()
         
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: .custom)
         button.frame = CGRect.init(x: 0, y: 44, width: 100, height: 30)
         button.backgroundColor = UIColor.green
         self.view.addSubview(button)
-        button.addTarget(self, action: #selector(buttonAction), for: UIControlEvents.touchUpInside)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         self.testView = UIView.init(frame: CGRect.init(x: 0, y: 100, width: 100, height: 40))
         self.testView?.backgroundColor = UIColor.gray

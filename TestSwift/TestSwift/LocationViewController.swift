@@ -56,7 +56,7 @@ class LocationViewController: UIViewController {
         self.locationManager.distanceFilter = kCLDistanceFilterNone
         self.locationManager .startUpdatingLocation()
         
-        let window = UIApplication.shared.delegate?.window
+        _ = UIApplication.shared.delegate?.window
         print("11111111111111111")
 //        print(window??.safeAreaInsets)
         // Optional(__C.UIEdgeInsets(top: 44.0, left: 0.0, bottom: 34.0, right: 0.0))
