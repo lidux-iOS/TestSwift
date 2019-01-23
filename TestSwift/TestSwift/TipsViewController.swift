@@ -23,7 +23,7 @@ class TipsViewController: UIViewController {
     }
     
     func testStruct() {
-        var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 0)
+        var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 0, secondValue: 0)
         let newRangeOfThreeItems = rangeOfThreeItems;// a new object  值类型赋值就是新对象
         rangeOfThreeItems.firstValue = 3
         
@@ -45,6 +45,10 @@ class TipsViewController: UIViewController {
         print("nameA:\(bbbb.nameA),nameB:\(bbbb.nameB)")
         _ = bbbb.updateCellWithBackData(32)
         
+        bbb.newNameA = "dsa"
+        
+        
+        ClassA.testClassFunction()
     }
 
 }
@@ -52,14 +56,49 @@ class TipsViewController: UIViewController {
 struct FixedLengthRange {
     var firstValue : Int
     let length : Int
+    var secondValue : Int
     
+    var center : CGPoint {
+        get {
+            return CGPoint.init(x: self.firstValue, y: self.secondValue)
+        }
+        set {
+            self.firstValue = Int(newValue.x)
+            self.secondValue = Int(newValue.y)
+        }
+    }
 }
 
 
 class ClassA {
-    var nameA : String
+    var result : String
+    
+    var nameA : String {
+        // init 方法中的赋值操作 会走get和set方法
+        get {
+            return self.result
+        }
+        set {
+            self.result = newValue + newValue
+        }
+    }
+    
+    var newNameA : String = "" {
+        // init 方法中的赋值操作不会走willSet和didSet方法
+        willSet(newName) {
+            print("new:\(newName)")
+        }
+        
+        didSet{
+            print("old:\(oldValue)")
+        }
+    }
+    
+    
     init(name:String) {
-        nameA = name
+        result = ""
+        self.nameA = name
+        self.newNameA = name
     }
     
     convenience init(isFamel:Bool) {
@@ -68,6 +107,10 @@ class ClassA {
     
     required convenience init(age:Int) {
         self.init(name: age > 10 ? "age>10":"age<10")
+    }
+    
+    class func testClassFunction() {
+        print("testClassFunction")
     }
     
 }

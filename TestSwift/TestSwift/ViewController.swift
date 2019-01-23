@@ -96,7 +96,7 @@ class ViewController: UIViewController {
 //        for var i = 0;i < 4;i++ {
 //            firstForLoop += 1
 //        }
-        print("firstForLoop = %d",firstForLoop)
+        print("firstForLoop = \(firstForLoop)")
         
         for _ in 0..<10 {
             print("aaa")
@@ -157,7 +157,7 @@ class ViewController: UIViewController {
         }
         
         let sumofList = sumOf(numbers: 1,2,3,4,5,6)
-        print("sumofList = %d",sumofList)
+        print("sumofList = \(sumofList)")
         
         /**
          *  函数可以嵌套。被嵌套的函数可以访问外侧函数的变量，你可以使用嵌套函数来重构一个太长或者太复杂的函数。
@@ -173,7 +173,7 @@ class ViewController: UIViewController {
         }
         
         let testY = returnFifteen()
-        print("testY=%d",testY)
+        print("testY=\(testY)")
         
         /**
          *  函数是第一等类型，这意味着函数可以作为另一个函数的返回值。
@@ -270,8 +270,8 @@ class ViewController: UIViewController {
         print(aceRawValue)
         print(aceHashValue)
         
-        if let convertedRank = Rank(rawValue: 10) {
-            print("有此枚举")
+        if let convertedRank = Rank(rawValue: 6) {
+            print("有此枚举:\(convertedRank.simpleDescription())")
         }
         
         
