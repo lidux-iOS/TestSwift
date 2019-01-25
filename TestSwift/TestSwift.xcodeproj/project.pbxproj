@@ -15,6 +15,7 @@
 		CD9FF2742151E60B00B70BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9FF2732151E60B00B70BDA /* Assets.xcassets */; };
 		CD9FF2772151E60B00B70BDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9FF2752151E60B00B70BDA /* LaunchScreen.storyboard */; };
 		CDD4C2A6216DA66C00AC0FCB /* AutoreleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4C2A5216DA66C00AC0FCB /* AutoreleaseViewController.swift */; };
+		CDD5D29221F94D6000A93887 /* Test0124ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5D29121F94D6000A93887 /* Test0124ViewController.swift */; };
 		CDE5A416216067E100AAEDF6 /* DataProcessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5A415216067E100AAEDF6 /* DataProcessorViewController.swift */; };
 		CDE5A4182160A15500AAEDF6 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5A4172160A15500AAEDF6 /* LocationViewController.swift */; };
 		CDF15C7A21F16FBA003B19AA /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15C7921F16FBA003B19AA /* TipsViewController.swift */; };
@@ -33,6 +34,7 @@
 		CD9FF2762151E60B00B70BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD9FF2782151E60B00B70BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD4C2A5216DA66C00AC0FCB /* AutoreleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoreleaseViewController.swift; sourceTree = "<group>"; };
+		CDD5D29121F94D6000A93887 /* Test0124ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test0124ViewController.swift; sourceTree = "<group>"; };
 		CDE5A415216067E100AAEDF6 /* DataProcessorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProcessorViewController.swift; sourceTree = "<group>"; };
 		CDE5A4172160A15500AAEDF6 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		CDF15C7921F16FBA003B19AA /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				CD9FF26C2151E60A00B70BDA /* AppDelegate.swift */,
+				CDD5D29121F94D6000A93887 /* Test0124ViewController.swift */,
 				CDF15C7921F16FBA003B19AA /* TipsViewController.swift */,
 				CD9FF26E2151E60A00B70BDA /* ViewController.swift */,
 				CD434E2221522CA800CFF0C7 /* BaseViewController.swift */,
@@ -163,6 +166,7 @@
 				CDF9D987219C381B00434AA4 /* BlockViewController.swift in Sources */,
 				CD9FF26F2151E60A00B70BDA /* ViewController.swift in Sources */,
 				CD9FF26D2151E60A00B70BDA /* AppDelegate.swift in Sources */,
+				CDD5D29221F94D6000A93887 /* Test0124ViewController.swift in Sources */,
 				CD434E2321522CA800CFF0C7 /* BaseViewController.swift in Sources */,
 				CD519F39219D0F71009F5944 /* CollectionCopyViewController.swift in Sources */,
 				CDD4C2A6216DA66C00AC0FCB /* AutoreleaseViewController.swift in Sources */,
@@ -312,6 +316,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DTESTMACRO";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ldx.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -331,6 +336,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DTESTMACRO";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ldx.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
