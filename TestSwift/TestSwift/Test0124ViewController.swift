@@ -16,7 +16,7 @@ class Test0124ViewController: UIViewController {
         testProtoclMethods()
         testOptionalMap()
         
-        // 宏在 build setting 里面设置
+        // 宏在 build setting 里面设置 -DTESTMACRO: 加个 -D
         #if TESTMACRO
         print("ttttt");
         #endif
