@@ -100,7 +100,8 @@ class ClassA {
         self.nameA = name
         self.newNameA = name
     }
-    
+    // convenience swift初始化方法中的二等公民，只为提供补充和提供使用上的方便，所有的convenience初始化方法必须使用同类中的designated方法初始化设置。另外convenience初始化方法不能被子类重写，或从子类x中以super的方式调用。
+    // 只要在子类中实现了父类的convenience方法所需的init方法，我们的子类就可以使用父类的convenience方法
     convenience init(isFamel:Bool) {
         self.init(name: (isFamel ? "lili":"mimi"))
     }
