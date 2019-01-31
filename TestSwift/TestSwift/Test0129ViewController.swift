@@ -13,9 +13,30 @@ class Test0129ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .red
+        testReduce()
         testInoutParam()
+        namessssss(dddd: 10, 20)
     }
     
+    func testReduce() {
+        let arrr = [1, 2, 3, 4, 5]
+        let value = arrr.reduce(15, +)
+        print("testReduce_value:\(value)")
+        let intoValue = 10
+        let value22 = arrr.reduce(into: intoValue) {
+            print($0)
+            print($1)
+            $0 = $0 + $1
+        }
+        
+        print("value22:\(value22)")
+        print("intoValue:\(intoValue)")
+        
+    }
+    
+    func namessssss(dddd: Int...) {
+        print("namessssss:\(dddd)")
+    }
     
     func testInoutParam() {
         /** 让值类型以引用方式传递
