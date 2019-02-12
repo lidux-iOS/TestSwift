@@ -50,7 +50,7 @@ class TestAESViewController: UIViewController {
         
         let targetStr = "asdfghjkl"
         let targetData = targetStr.data(using: .utf8)
-        // 密码、偏移量、填充、加密模式
+        // key：密码、iv：偏移量、padding：填充
         var encoded: [UInt8] = []
         do {
             encoded = try AES.init(key: "ts1ngz0ne2015NO1", iv: "0102030405060708", padding: .zeroPadding) .encrypt(targetData!.bytes)
