@@ -38,12 +38,6 @@ class TestAESViewController: UIViewController {
                 kCCOptionPKCS7Padding   = 0x0001,
                 kCCOptionECBMode
          *
-         *
-         *
-         *
-         *
-         *
-         *
          *       CCCrypt(<#T##op: CCOperation##CCOperation#>, <#T##alg: CCAlgorithm##CCAlgorithm#>, <#T##options: CCOptions##CCOptions#>, <#T##key: UnsafeRawPointer!##UnsafeRawPointer!#>, <#T##keyLength: Int##Int#>, <#T##iv: UnsafeRawPointer!##UnsafeRawPointer!#>, <#T##dataIn: UnsafeRawPointer!##UnsafeRawPointer!#>, <#T##dataInLength: Int##Int#>, <#T##dataOut: UnsafeMutableRawPointer!##UnsafeMutableRawPointer!#>, <#T##dataOutAvailable: Int##Int#>, <#T##dataOutMoved: UnsafeMutablePointer<Int>!##UnsafeMutablePointer<Int>!#>)
          */
         

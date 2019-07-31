@@ -82,10 +82,11 @@
 		CD1C9C8E2212797D008078FA /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C9C422212797D008078FA /* CTR.swift */; };
 		CD1C9C8F2212797D008078FA /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C9C432212797D008078FA /* OFB.swift */; };
 		CD1C9C902212797D008078FA /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C9C442212797D008078FA /* ChaCha20.swift */; };
-		CD1C9C912212797D008078FA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD1C9C452212797D008078FA /* Info.plist */; };
+		CD1C9C912212797D008078FA /* crypto_Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD1C9C452212797D008078FA /* crypto_Info.plist */; };
 		CD1C9C922212797D008078FA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C9C462212797D008078FA /* Array+Extension.swift */; };
 		CD434E2321522CA800CFF0C7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD434E2221522CA800CFF0C7 /* BaseViewController.swift */; };
 		CD519F39219D0F71009F5944 /* CollectionCopyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD519F38219D0F71009F5944 /* CollectionCopyViewController.swift */; };
+		CD94CCEE22F129DA00AA2EBF /* ProtocolTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD94CCED22F129DA00AA2EBF /* ProtocolTestViewController.swift */; };
 		CD9FF26D2151E60A00B70BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FF26C2151E60A00B70BDA /* AppDelegate.swift */; };
 		CD9FF26F2151E60A00B70BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FF26E2151E60A00B70BDA /* ViewController.swift */; };
 		CD9FF2742151E60B00B70BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9FF2732151E60B00B70BDA /* Assets.xcassets */; };
@@ -176,11 +177,12 @@
 		CD1C9C422212797D008078FA /* CTR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTR.swift; sourceTree = "<group>"; };
 		CD1C9C432212797D008078FA /* OFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFB.swift; sourceTree = "<group>"; };
 		CD1C9C442212797D008078FA /* ChaCha20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaCha20.swift; sourceTree = "<group>"; };
-		CD1C9C452212797D008078FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1C9C452212797D008078FA /* crypto_Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = crypto_Info.plist; sourceTree = "<group>"; };
 		CD1C9C462212797D008078FA /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		CD1C9C472212797D008078FA /* CryptoSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoSwift.h; sourceTree = "<group>"; };
 		CD434E2221522CA800CFF0C7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CD519F38219D0F71009F5944 /* CollectionCopyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCopyViewController.swift; sourceTree = "<group>"; };
+		CD94CCED22F129DA00AA2EBF /* ProtocolTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestViewController.swift; sourceTree = "<group>"; };
 		CD9FF2692151E60A00B70BDA /* TestSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9FF26C2151E60A00B70BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD9FF26E2151E60A00B70BDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -270,7 +272,7 @@
 				CD1C9C322212797D008078FA /* PKCS */,
 				CD1C9C382212797D008078FA /* BlockMode */,
 				CD1C9C442212797D008078FA /* ChaCha20.swift */,
-				CD1C9C452212797D008078FA /* Info.plist */,
+				CD1C9C452212797D008078FA /* crypto_Info.plist */,
 				CD1C9C462212797D008078FA /* Array+Extension.swift */,
 			);
 			path = CryptoSwift;
@@ -365,6 +367,7 @@
 				CD042185218307780043CC45 /* BezierViewController.swift */,
 				CDF9D986219C381B00434AA4 /* BlockViewController.swift */,
 				CD519F38219D0F71009F5944 /* CollectionCopyViewController.swift */,
+				CD94CCED22F129DA00AA2EBF /* ProtocolTestViewController.swift */,
 				CD9FF2732151E60B00B70BDA /* Assets.xcassets */,
 				CD9FF2752151E60B00B70BDA /* LaunchScreen.storyboard */,
 				CD9FF2782151E60B00B70BDA /* Info.plist */,
@@ -432,7 +435,7 @@
 			files = (
 				CD9FF2772151E60B00B70BDA /* LaunchScreen.storyboard in Resources */,
 				CD9FF2742151E60B00B70BDA /* Assets.xcassets in Resources */,
-				CD1C9C912212797D008078FA /* Info.plist in Resources */,
+				CD1C9C912212797D008078FA /* crypto_Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +505,7 @@
 				CDD4C2A6216DA66C00AC0FCB /* AutoreleaseViewController.swift in Sources */,
 				CD042186218307790043CC45 /* BezierViewController.swift in Sources */,
 				CD1C9C712212797D008078FA /* RandomBytesSequence.swift in Sources */,
+				CD94CCEE22F129DA00AA2EBF /* ProtocolTestViewController.swift in Sources */,
 				CD1C9C882212797D008078FA /* ECB.swift in Sources */,
 				CD1C9C642212797D008078FA /* AES+Foundation.swift in Sources */,
 				CDFE7990216CC06E00A2D7D3 /* TestViewController.swift in Sources */,

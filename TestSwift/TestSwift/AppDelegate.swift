@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = TestAESViewController()
+        self.window?.rootViewController = ProtocolTestViewController()
         self.window?.makeKeyAndVisible()
         return true
     }

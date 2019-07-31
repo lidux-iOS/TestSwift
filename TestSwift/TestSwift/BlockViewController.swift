@@ -12,7 +12,7 @@ class BlockViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.red
         ///闭包 简化过程
         // MARK: step1
 //        let testBlock:(Int)->Int = {
@@ -50,8 +50,41 @@ class BlockViewController: UIViewController {
         print(value)
         
         
-        collectionUsingBLock()
+//        collectionUsingBLock()
+        step1()
     }
+    
+    fileprivate
+    
+    func step1() {
+        typealias NamesClosures = (_ s1: String, _ s2: String) -> String
+        
+        var aNamesClosures: NamesClosures?
+        
+        /// 闭包的主体由in关键字引入。这个关键字表示闭包的参数和返回类型的定义已经完成，闭包的主体即将开始
+//        aNamesClosures = { (_ s1: String, _ s2: String) -> String in
+//            return s1 + s2;
+//        }
+        /// 因为Swift可以推断出它的参数类型以及它返回值的类型。所以可以省略返回箭头（->）和参数名称周围的括号(String: String)
+//        aNamesClosures = { s1, s2 in
+//            return s1 + s2;
+//        }
+        
+        /// 单表达式闭包  可以隐式返回单个表达式的结果，所以我们可以省略关键字return
+//        aNamesClosures = { s1, s2 in
+//            s1 + s2;
+//        }
+        
+        //由于swift自动为内联闭包提供速记参数名,参数名依照参数顺序指的是$0,$1,$2...
+        //如果我们想省略闭包的参数列表，那么必须要在主体中实现所有参数值的简写
+        //同时也可以省略in关键字，因为闭包表达式完全由其主体组成
+        //在这里，$0和$1依次等于闭包中的String参数s1和s2
+        
+        aNamesClosures = {$0 + $1}
+        
+        print(aNamesClosures!("1000", "3"))
+    }
+    
     
     func collectionUsingBLock() {
         
