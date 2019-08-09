@@ -10,27 +10,42 @@ import UIKit
 
 class ProtocolTestViewController: UIViewController {
 
+    var ppp: Person?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
-        let ppp = Person()
-        ppp.name = "ll"
+        ppp = Person()
+        ppp?.name = "ll"
         
-        let newP = ppp.copy_bySelf()
-        ppp.name = "dd"
+        let newP = ppp?.copy_bySelf()
+        ppp?.name = "dd"
         
-        let newP2 = ppp.copy_bySelf222()
-        ppp.name = "xx"
+        let newP2 = ppp?.copy_bySelf222()
+        ppp?.name = "xx"
     
     
-        print("ppp:\(String(describing: ppp.name)), newP:\(String(describing: newP.name)), newP2:\(newP2.name)")
+        print("ppp:\(String(describing: ppp?.name)), newP:\(String(describing: newP?.name)), newP2:\(String(describing: newP2?.name))")
         
+        let nmae = "name"
+        ppp?.addObserver(self, forKeyPath: nmae, options: .new, context: nil)
+        
+        
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        print(change)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.ppp!.name = self.ppp!.name! + self.ppp!.name!
     }
 
 }
 
-class Person: Copyable {
+class Person: NSObject, Copyable {
     typealias T = Person
     
     func copy_bySelf() -> Self {
@@ -48,11 +63,11 @@ class Person: Copyable {
     
     /// 保证子类都能响应这个方法
     /// 或者使用final关键字
-    required init() {
+    required override init() {
         
     }
     
-    var name : String?
+    @objc dynamic var name : String?
     
 }
 
