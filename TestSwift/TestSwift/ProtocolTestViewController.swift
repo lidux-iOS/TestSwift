@@ -32,11 +32,18 @@ class ProtocolTestViewController: UIViewController {
         let nmae = "name"
         ppp?.addObserver(self, forKeyPath: nmae, options: .new, context: nil)
         
+        let num1: Int = 2
+        let num2: Int = Int(3.2)
+        print(testMin(num1, num2))
         
     }
     
+    func testMin<T: Comparable>(_ a: T, _ b: T) -> T {
+        return a < b ? a : b;
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        print(change)
+        print(change ?? [:])
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

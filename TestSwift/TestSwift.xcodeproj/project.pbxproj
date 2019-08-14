@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD042186218307790043CC45 /* BezierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD042185218307780043CC45 /* BezierViewController.swift */; };
+		CD085B732302D329003FE387 /* MethodSwizzlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD085B722302D329003FE387 /* MethodSwizzlingViewController.swift */; };
 		CD1C9BF5221264B0008078FA /* TestAESViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C9BF4221264B0008078FA /* TestAESViewController.swift */; };
 		CD1C9C482212797D008078FA /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C9BF82212797D008078FA /* AES.swift */; };
 		CD1C9C492212797D008078FA /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C9BF92212797D008078FA /* StreamDecryptor.swift */; };
@@ -103,6 +104,7 @@
 
 /* Begin PBXFileReference section */
 		CD042185218307780043CC45 /* BezierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierViewController.swift; sourceTree = "<group>"; };
+		CD085B722302D329003FE387 /* MethodSwizzlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSwizzlingViewController.swift; sourceTree = "<group>"; };
 		CD1C9BF4221264B0008078FA /* TestAESViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAESViewController.swift; sourceTree = "<group>"; };
 		CD1C9BF82212797D008078FA /* AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
 		CD1C9BF92212797D008078FA /* StreamDecryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamDecryptor.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 			children = (
 				CD1C9BF62212797D008078FA /* CryptoSwiftSources */,
 				CD9FF26C2151E60A00B70BDA /* AppDelegate.swift */,
+				CD085B722302D329003FE387 /* MethodSwizzlingViewController.swift */,
 				CD1C9BF4221264B0008078FA /* TestAESViewController.swift */,
 				CDD5D2A121FFE6D600A93887 /* Test0129ViewController.swift */,
 				CDD5D29121F94D6000A93887 /* Test0124ViewController.swift */,
@@ -463,6 +466,7 @@
 				CD1C9C632212797D008078FA /* Array+Foundation.swift in Sources */,
 				CDD5D29221F94D6000A93887 /* Test0124ViewController.swift in Sources */,
 				CD1C9C652212797D008078FA /* Rabbit+Foundation.swift in Sources */,
+				CD085B732302D329003FE387 /* MethodSwizzlingViewController.swift in Sources */,
 				CD1C9C512212797D008078FA /* CBCMAC.swift in Sources */,
 				CD1C9C902212797D008078FA /* ChaCha20.swift in Sources */,
 				CD1C9C8C2212797D008078FA /* GCM.swift in Sources */,
@@ -681,7 +685,7 @@
 				OTHER_SWIFT_FLAGS = "-DTESTMACRO";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ldx.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -701,7 +705,7 @@
 				OTHER_SWIFT_FLAGS = "-DTESTMACRO";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ldx.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
