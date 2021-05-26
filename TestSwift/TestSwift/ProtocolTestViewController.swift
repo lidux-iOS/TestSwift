@@ -20,6 +20,12 @@ class ProtocolTestViewController: UIViewController {
         ppp = Person()
         ppp?.name = "ll"
         
+        let pppMirror = Mirror.init(reflecting: ppp!)
+        
+        for item in pppMirror.children {
+            print(item)
+        }
+        
         let newP = ppp?.copy_bySelf()
         ppp?.name = "dd"
         
@@ -68,10 +74,13 @@ class Person: NSObject, Copyable {
         return p
     }
     
+    private let agesss: Int;
+    
+    
     /// 保证子类都能响应这个方法
     /// 或者使用final关键字
     required override init() {
-        
+        self.agesss = 10
     }
     
     @objc dynamic var name : String?
